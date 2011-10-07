@@ -1,0 +1,22 @@
+LogCat is a replacement LogCat viewer for android that provides more control
+over the display and filtering of Android logcat output than is available with
+the eclipse plugin.
+
+I wanted several features that the Eclipse built-in viewer doesn't provide:
+- The ability to filter and search based on regular expressions
+- The ability to view a selected set of app tags in one pane.
+- The ability to change the filtering and searching on the fly.
+
+To try it out, connect a single Android device to your computer, and run:
+  wish logcat.tcl
+This is an early prototype, let me know if you think it could be useful 
+(or what you think I should add to make it so).
+
+Notes
+- Make sure adb is on your path
+- I run this on Linux, but it should also work on Windows and OSX
+- The code exists to allow user's to change any of the filter colors, but
+  I haven't decided on a UI yet
+
+suhler at google.com
+October, 2011
