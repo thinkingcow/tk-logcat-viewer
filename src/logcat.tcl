@@ -635,6 +635,10 @@ proc next_line {fd} {
   global Gsearch
   if {$Searching} {
     add_tag $Gsearch search none $here  "-regexp"
+    global Gmode
+    if {$Gmode} {
+      .t tag add hidden $here end
+    }
   }
   if {$Stick} {
     .t see end
