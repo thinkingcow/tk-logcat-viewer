@@ -58,6 +58,10 @@ exec wish $0 -- ${1+"$@"}
 
 set Version 0.2
 
+# You may need to set this for windoz
+# set env(PATH) "C:/Program Files/Android/android-sdk/platform-tools"
+
+
 # destroy everything so we can re-source for debugging
 catch {font delete base_font}
 catch {eval destroy [winfo children .]}
