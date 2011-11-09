@@ -1016,6 +1016,15 @@ proc select_device {} {
 reset_tabs
 .t tag configure msg -lmargin2 30
 
+# override setting in lieu of a proper prefence settings
+
+if {[catch {
+  source $env(HOME)/.logcatrc
+  }]} {
+   tk_messageBox -title "Error" -message \
+     "Startup file error: ${errorInfo}"
+}
+
 if {[get_devices] != ""} {
   set Device [select_device]
   adb_init
